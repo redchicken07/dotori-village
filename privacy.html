@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 · kids-pipeline</title>
+<style>
+  :root { --bg: #fffdf7; --fg: #2b2620; --muted: #6b6257; --accent: #8a5a2b; --line: #eadfce; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #1d1a16; --fg: #f3ede4; --muted: #b9ae9f; --accent: #e0a463; --line: #3a332b; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.7 system-ui, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; }
+  h2 { font-size: 1.1rem; margin: 32px 0 8px; color: var(--accent); }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  ul { padding-left: 1.2em; }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>개인정보처리방침</h1>
+  <p class="sub">kids-pipeline (도토리 마을 채널 운영 도구) · 시행일 2026년 10월 14일</p>
+
+  <h2>1. 이 앱은 무엇인가요</h2>
+  <p>kids-pipeline은 도토리 마을 채널 운영자가 직접 만든 영상을 운영자 본인의 YouTube 채널에 올리고, 운영자 본인의 Google Drive에 보관하기 위해 쓰는 내부 자동화 도구입니다. 일반 사용자에게 제공되는 서비스가 아니며, 운영자 외의 사람은 로그인하거나 사용할 수 없습니다.</p>
+
+  <h2>2. 접근하는 Google 데이터</h2>
+  <ul>
+    <li><b>YouTube</b> (youtube.upload, youtube.force-ssl): 운영자 채널에 영상·자막·썸네일을 올리고, 공개 예약과 아동용 설정을 관리합니다.</li>
+    <li><b>YouTube Analytics</b> (yt-analytics.readonly): 운영자 채널의 조회수·시청 시간 통계를 읽어 주간 보고서를 만듭니다.</li>
+    <li><b>Google Drive</b> (drive.file): 이 앱이 만든 폴더와 파일만 읽고 씁니다. 운영자의 다른 Drive 파일에는 접근하지 않습니다.</li>
+  </ul>
+
+  <h2>3. 이용과 공유</h2>
+  <ul>
+    <li>위 데이터는 운영자 본인의 채널 운영에만 쓰며, 판매하거나 광고에 쓰거나 제3자와 공유하지 않습니다.</li>
+    <li>영상 시청자의 개인정보는 수집하지 않습니다. 채널 통계는 YouTube가 제공하는 집계 수치뿐입니다.</li>
+    <li>영상 기획과 검수에 AI(Anthropic Claude API)를 쓰지만, 이때 보내는 것은 대본과 영상 프레임이며 시청자나 다른 사람의 개인정보는 보내지 않습니다.</li>
+    <li>Google API에서 받은 정보의 사용과 이전은 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>과 제한적 사용(Limited Use) 요건을 따릅니다.</li>
+  </ul>
+
+  <h2>4. 보관과 삭제</h2>
+  <ul>
+    <li>Google 인증 토큰은 운영자의 비공개 GitHub 저장소에 암호화된 Secret으로만 보관합니다.</li>
+    <li>운영자는 <a href="https://myaccount.google.com/permissions">Google 계정 → 타사 액세스</a>에서 언제든 이 앱의 접근 권한을 철회할 수 있으며, 철회하면 앱은 더 이상 데이터에 접근하지 못합니다.</li>
+  </ul>
+
+  <h2>5. 아동의 개인정보</h2>
+  <p>도토리 마을 영상은 아동용으로 설정되어 게시됩니다. 이 앱은 아동을 포함한 시청자에게서 어떤 개인정보도 수집하지 않습니다.</p>
+
+  <h2>6. 변경과 문의</h2>
+  <p>이 방침이 바뀌면 이 페이지를 고치고 시행일을 갱신합니다. 문의는 이 페이지를 게시한 <a href="https://github.com/redchicken07/dotori-village/issues">GitHub 저장소의 이슈</a>로 남겨 주세요.</p>
+
+  <hr>
+
+  <h1 lang="en">Privacy Policy</h1>
+  <p class="sub" lang="en">kids-pipeline (operations tool for the Acorn Village channel) · Effective October 14, 2026</p>
+  <div lang="en">
+    <p><b>What it is.</b> kids-pipeline is an internal automation tool the channel owner uses to upload the owner's own videos to the owner's own YouTube channel and archive them in the owner's own Google Drive. It is not offered to the public; no one other than the owner can sign in or use it.</p>
+    <p><b>Google data accessed.</b> YouTube (youtube.upload, youtube.force-ssl) to upload videos, captions and thumbnails and to manage scheduling and made-for-kids settings on the owner's channel; YouTube Analytics (yt-analytics.readonly) to read the owner's channel statistics for a weekly report; Google Drive (drive.file) limited to folders and files created by this app.</p>
+    <p><b>Use and sharing.</b> Data is used only to operate the owner's channel. It is never sold, used for advertising or shared with third parties. No personal information about viewers is collected; analytics are aggregate figures provided by YouTube. Scripts and video frames (no personal data) are sent to the Anthropic Claude API for planning and quality checks. The app's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    <p><b>Storage and deletion.</b> Google tokens are stored only as encrypted secrets in the owner's private GitHub repository. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">Google Account → Third-party access</a>; after revocation the app can no longer access any data.</p>
+    <p><b>Children.</b> Acorn Village videos are published as made for kids. The app collects no personal information from any viewer, including children.</p>
+    <p><b>Changes and contact.</b> Changes are posted on this page with a new effective date. Questions: open an issue in the <a href="https://github.com/redchicken07/dotori-village/issues">GitHub repository</a> that publishes this page.</p>
+  </div>
+</main>
+</body>
+</html>
